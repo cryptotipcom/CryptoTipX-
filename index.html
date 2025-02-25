@@ -1,3 +1,7 @@
+https://github.com/cryptotipcom/CryptoTipX-/blob/main/tiptip.png
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +12,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
         body {
-            background: #2D3748;
+            background: #2D3748; /* Solid Dark Grey/Blue for a clear, solid background */
             color: white;
             font-family: 'Orbitron', sans-serif;
             text-align: center;
@@ -19,21 +23,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            overflow: auto;
-        }
-
-        /* TipTip Mascot Styling */
-        .tiptip-container {
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        .tiptip-container img {
-            width: 180px; /* Adjust size as needed */
-            max-width: 90%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+            overflow: auto; /* Changed from hidden to allow scrolling on mobile */
         }
 
         h1 {
@@ -41,23 +31,302 @@
             font-weight: bold;
             text-transform: uppercase;
             text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
-            background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+            background: linear-gradient(to right, #FFFFFF, #FFFFFF); /* White for "CryptoTipX" for clarity */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin: 20px 0 10px;
         }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: normal;
+            color: #FFFFFF; /* White for secondary text, clear and fun */
+            margin: 5px 0;
+        }
+
+        .slogan {
+            font-size: 1.5em;
+            font-weight: 600;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+            color: #D4A437; /* Gold for "Tip-Tap Crypto", fun and shiny */
+            margin: 5px 0;
+        }
+
+        .countdown {
+            margin: 10px 0;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+            color: #D4A437; /* Gold for countdown, vibrant and eye-catching */
+        }
+
+        .token-info {
+            margin: 10px 0;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #FFFFFF; /* White for token info, clear and solid */
+            max-width: 90vw;
+            line-height: 1.5;
+        }
+
+        .token-info .token-address {
+            display: block;
+            background: rgba(176, 176, 176, 0.1); /* Light Silver/Grey for background, subtle metallic fun */
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 0.95em;
+            overflow-x: auto;
+            white-space: nowrap;
+            max-width: 80vw;
+            margin: 8px auto;
+        }
+
+        .token-info a {
+            color: #D4A437; /* Gold for links, fun and shiny */
+            text-decoration: none;
+        }
+
+        .token-info a:hover {
+            color: #B87333; /* Bronze for hover, adds playful contrast */
+        }
+
+        .tipping-section {
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.1); /* Black for tipping background, solid and fun */
+            border-radius: 5px;
+            max-width: 90vw;
+        }
+
+        .tipping-section h3 {
+            font-size: 1.3em;
+            margin: 0 0 10px;
+            color: #B87333; /* Bronze for "Tip with TIPX", playful and metallic */
+        }
+
+        .tipping-section input {
+            padding: 8px;
+            margin: 5px 0;
+            width: 80%;
+            max-width: 260px;
+            border-radius: 5px;
+            border: none;
+            font-size: 0.9em;
+            background: rgba(176, 176, 176, 0.2); /* Light Silver/Grey for input background, subtle fun */
+            color: white;
+        }
+
+        .tipping-section button,
+        .buttons a {
+            text-decoration: none;
+            background: linear-gradient(to right, #D4A437, #B87333); /* Gold to Bronze gradient for buttons, fun and shiny */
+            color: #2D3748; /* Dark Grey/Blue for button text, solid contrast */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.2s, background 0.3s;
+            cursor: pointer;
+            margin: 5px 0;
+            width: 80%;
+            max-width: 260px;
+            border: none;
+        }
+
+        .tipping-section button:hover,
+        .buttons a:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #B87333, #D4A437); /* Reversed Bronze to Gold gradient on hover, playful */
+        }
+
+        #tip-status, #tip-incentive {
+            font-size: 1em; /* Increased font size for visibility */
+            font-weight: bold; /* Bold text for emphasis */
+            color: #D4A437; /* Gold for maximum visibility, fun and shiny */
+            margin-top: 10px;
+            text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3); /* Slight glow for emphasis */
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 15px 0;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .footer {
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #B0B0B0; /* Silver/Grey for footer, subtle metallic fun */
+            margin: 20px 0;
+            padding-bottom: 10px;
+        }
+
+        /* Mobile Adjustments */
+        @media screen and (max-width: 600px) {
+            h1 { font-size: 2.5em; }
+            h2, .slogan { font-size: 1.2em; }
+            .countdown { font-size: 1.5em; }
+            .token-info { font-size: 0.9em; }
+            .token-info .token-address { font-size: 0.8em; }
+            .tipping-section h3 { font-size: 1.1em; }
+            .tipping-section input, .tipping-section button, .buttons a {
+                font-size: 0.9em;
+                padding: 8px 15px;
+                max-width: 220px;
+            }
+            #tip-status, #tip-incentive { font-size: 0.9em; } /* Adjust for mobile */
+            .footer { font-size: 0.8em; }
+        }
     </style>
 </head>
 <body>
-
-    <!-- TipTip Mascot -->
-    <div class="tiptip-container">
-        <img src="https://raw.githubusercontent.com/cryptotipcom/CryptoTipX-/main/tiptip.png" alt="TipTip - CryptoTipX Mascot">
-    </div>
-
     <h1>CryptoTipX</h1>
     <div class="slogan">Tip-Tap Crypto</div>
     <h2>Coming Soon</h2>
+    <div class="countdown" id="countdown">Loading...</div>
 
+    <!-- Token Information Section -->
+    <div class="token-info">
+        <span>Token: <strong>CryptoTipX (TIPX)</strong></span> <br>
+        <span>Address:</span>
+        <div class="token-address">
+            <a href="https://bscscan.com/token/0x145020ca4e9dd6627921416631b90b95ceeeab5d" target="_blank">
+                0x145020ca4e9dd6627921416631b90b95ceeeab5d
+            </a>
+        </div>
+    </div>
+
+    <!-- Tipping Section -->
+    <div class="tipping-section">
+        <h3>Tip with TIPX</h3>
+        <input id="recipientAddress" type="text" placeholder="Recipient BSC Address">
+        <input id="tipAmount" type="number" placeholder="TIPX Amount (e.g., 100)">
+        <button id="sendTip">Tip Now</button>
+        <button id="connectWallet">Connect Wallet</button>
+        <div id="tip-status">Tip to earn 10 TIPX bonus per 100 TIPX!</div>
+    </div>
+
+    <div class="buttons">
+        <a href="https://x.com/com_tip74636" target="_blank">Follow us on X</a>
+        <a href="https://t.me/CryptoTipX_chat" target="_blank">Join us on Telegram</a>
+        <a href="mailto:info@crypto-tip.com">Contact: info@crypto-tip.com</a>
+    </div>
+
+    <div class="footer">
+        © 2025 CryptoTip.com LTD | CryptoTipX™ | Tip-Tap Crypto™
+    </div>
+
+    <!-- Web3 Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.7.0/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Countdown Timer (March 30, 2025, 00:00 UTC)
+            function updateCountdown() {
+                const launchDate = new Date(Date.UTC(2025, 2, 30, 0, 0, 0));
+                const now = new Date().getTime();
+                const timeLeft = launchDate - now;
+
+                if (timeLeft > 0) {
+                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                    document.getElementById("countdown").innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
+                } else {
+                    document.getElementById("countdown").innerHTML = "Launched!";
+                }
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Web3 Tipping Logic with Enhanced WalletConnect for iOS MetaMask
+            const tipxContractAddress = "0x145020ca4e9dd6627921416631b90b95ceeeab5d";
+            const tipxABI = [
+                {"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"}
+            ];
+
+            let web3, connectedAccount, walletProvider;
+
+            async function connectWallet() {
+                try {
+                    // Try MetaMask first, with deep linking for iOS
+                    if (window.ethereum) {
+                        web3 = new Web3(window.ethereum);
+                        try {
+                            await window.ethereum.request({ method: "eth_requestAccounts" });
+                            connectedAccount = (await web3.eth.getAccounts())[0];
+                            updateWalletStatus(Connected: ${connectedAccount.slice(0, 6)}...${connectedAccount.slice(-4)} - Ready to tip!);
+                        } catch (e) {
+                            if (e.code === -32002 || e.message.includes("User denied")) {
+                                // Attempt deep link for iOS MetaMask
+                                if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+                                    const metaMaskDeepLink = metamask://open?uri=wc:${encodeURIComponent(window.location.href)};
+                                    window.location.href = metaMaskDeepLink;
+                                    setTimeout(() => {
+                                        updateWalletStatus("Open MetaMask app to connect. If prompted, allow permissions and try again!");
+                                    }, 1000);
+                                    return;
+                                }
+                            }
+                            throw new Error("MetaMask connection failed: " + e.message);
+                        }
+                    }
+                    // WalletConnect for Mobile (iOS/Android) if MetaMask fails
+                    else {
+                        walletProvider = new WalletConnectProvider({
+                            rpc: { 56: "https://bsc-dataseed.binance.org/" }, // BSC Mainnet RPC
+                            qrcodeModalOptions: {
+                                mobileLinks: ["metamask", "trust"],
+                                desktopLinks: ["metamask"]
+                            }
+                        });
+                        await walletProvider.enable();
+                        web3 = new Web3(walletProvider);
+                        connectedAccount = (await web3.eth.getAccounts())[0];
+                        updateWalletStatus(Connected via WalletConnect: ${connectedAccount.slice(0, 6)}...${connectedAccount.slice(-4)} - Ready to tip!);
+                    }
+                } catch (error) {
+                    updateWalletStatus("Cannot connect any wallet. Ensure MetaMask/Trust Wallet is installed, on BSC Mainnet, permissions are granted, and app is open. Try again or scan QR with wallet app!");
+                    console.error("Wallet connection error:", error);
+                }
+            }
+
+            function updateWalletStatus(message) {
+                document.getElementById("tip-status").innerHTML = message;
+            }
+
+            async function sendTip() {
+                const recipient = document.getElementById("recipientAddress").value;
+                const amount = document.getElementById("tipAmount").value;
+                if (!web3 || !connectedAccount) {
+                    updateWalletStatus("Connect your wallet first!");
+                    return;
+                }
+                if (!recipient || !amount || amount <= 0) {
+                    updateWalletStatus("Enter a valid address and amount!");
+                    return;
+                }
+                try {
+                    const contract = new web3.eth.Contract(tipxABI, tipxContractAddress);
+                    const weiAmount = web3.utils.toWei(amount, "ether"); // Assumes 18 decimals
+                    await contract.methods.transfer(recipient, weiAmount).send({ from: connectedAccount });
+                    updateWalletStatus(Tipped ${amount} TIPX! Log on Telegram/X for 10 TIPX bonus per 100 TIPX tipped!);
+                } catch (error) {
+                    updateWalletStatus("Tipping failed. Check wallet, network, or balance!");
+                    console.error("Tipping error:", error);
+                }
+            }
+
+            document.getElementById("connectWallet").addEventListener("click", connectWallet);
+            document.getElementById("sendTip").addEventListener("click", sendTip);
+        });
+    </script>
 </body>
 </html>
