@@ -52,7 +52,8 @@ License
 MIT License – Free to use, modify, and contribute.
 
 Website: crypto-tip.com  
-Twitter/X: twitter.com/CryptoTipX  
+Twitter/X:  https://x.com/com_tip74636 
+Telegram : https://t.me/CryptoTipX_chat
 
 Join the TIPX movement and redefine tipping and microtransactions worldwide.
 
